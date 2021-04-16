@@ -515,10 +515,13 @@ let ChangeTypeContext = React.createContext();
 function InputContainer(props){
     let [new_note_data, set_new_note_data] = useState(props.data || [{type:-1,noteId:v4(),title:'',date_created:(new Date()).toDateString().substr(4)},{type:7,data:{},id:v4(), index:0}]);
     let [new_note_stack , set_new_note_stack] = useState([]);
-    let [change_type, set_change_type] = useState(0);
+    let [change_type, set_change_type] = useState(-1);
     let main_container = useRef(null);
 
     useEffect(()=>{
+        if(change_type === -1){
+            return;
+        }
         if(!main_container.current.children[main_container.current.children.length - 1]){
             return;
         }
