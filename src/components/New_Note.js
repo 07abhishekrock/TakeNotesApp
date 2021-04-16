@@ -63,7 +63,7 @@ function TextArea(props){
 function ImageInput(props){
     let [image, set_image] = useState(default_image);
     let [new_note_data, set_new_note_data] = useContext(NewNoteContext);
-    let [alert, set_alert] = useContext(AlertContext);
+    let set_alert = useContext(AlertContext)[1];
     let input_ref = useRef(null);
     let [error_status, set_error_status] = useState(0);
     let file_input_ref = useRef(null);
@@ -585,7 +585,7 @@ function InputContainer(props){
                         </NoteSegment>
                     )
                     case -1: return(
-                        <NoteTitle title={element.title}/>
+                        <NoteTitle key={"note-title"} title={element.title}/>
                     )
                     default :return (null);
 
@@ -683,7 +683,7 @@ function OptionsChoice(props){
     )
 }
 
-function New_Note(props){
+function NewNote(props){
     return(
         <div className="input-container">
         <InputContainer data={[{type:-1,noteId:v4(),date_created:(new Date()).toDateString().substr(4)},{type:7,data:{},id:v4(), index:0}]}>
@@ -696,4 +696,4 @@ function New_Note(props){
     );
 }
 
-export {InputContainer, New_Note, OptionsChoice, NewNoteContext, NewNoteStackContext};
+export {InputContainer, NewNote, OptionsChoice, NewNoteContext, NewNoteStackContext};

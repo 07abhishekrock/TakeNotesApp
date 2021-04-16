@@ -1,6 +1,6 @@
 import React, {useState, useRef, useEffect, useContext} from 'react';
 import {UserContext, NoteDataContext, EditNoteDataContext, EditNoteContext, AlertContext } from './Contexts';
-import {convertNoteDatatoEditData, DeleteNoteWithId, EditNoteWithId, getNoteDataFromEditData} from '../utilities/LocalStorage';
+import {convertNoteDatatoEditData, DeleteNoteWithId, EditNoteWithId} from '../utilities/LocalStorage';
 import MasonryObject from '../utilities/masonry';
 
 //create sample note data to test out functionality

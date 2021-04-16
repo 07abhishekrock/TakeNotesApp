@@ -1,6 +1,6 @@
 import React , {useState, useRef, useContext, useEffect} from 'react';
 import './App.css';
-import {New_Note} from './components/New_Note';
+import {NewNote} from './components/New_Note';
 import QuickPeek from './components/QuickPeek';
 import EditNote from './components/EditNote';
 import NotesBoard from './components/NotesBoard';
@@ -119,7 +119,7 @@ function App() {
             <QuickPeek/>
             <div className="right">
               <h1>Create A New Note <i></i></h1>
-              <New_Note/>
+              <NewNote/>
             </div>
         </div>
         <SearchBar/>
