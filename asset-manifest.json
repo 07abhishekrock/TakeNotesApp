@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Take-Notes/static/css/main.e76d1e76.chunk.css",
+    "main.js": "/Take-Notes/static/js/main.b0927fe0.chunk.js",
+    "main.js.map": "/Take-Notes/static/js/main.b0927fe0.chunk.js.map",
+    "runtime-main.js": "/Take-Notes/static/js/runtime-main.c2dba700.js",
+    "runtime-main.js.map": "/Take-Notes/static/js/runtime-main.c2dba700.js.map",
+    "static/js/2.d8a81e45.chunk.js": "/Take-Notes/static/js/2.d8a81e45.chunk.js",
+    "static/js/2.d8a81e45.chunk.js.map": "/Take-Notes/static/js/2.d8a81e45.chunk.js.map",
+    "index.html": "/Take-Notes/index.html",
+    "static/css/main.e76d1e76.chunk.css.map": "/Take-Notes/static/css/main.e76d1e76.chunk.css.map",
+    "static/js/2.d8a81e45.chunk.js.LICENSE.txt": "/Take-Notes/static/js/2.d8a81e45.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/Take-Notes/static/media/undo_btn.39c9d7f6.svg",
+    "static/media/image_default.1b46f609.png": "/Take-Notes/static/media/image_default.1b46f609.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2dba700.js",
+    "static/js/2.d8a81e45.chunk.js",
+    "static/css/main.e76d1e76.chunk.css",
+    "static/js/main.b0927fe0.chunk.js"
+  ]
+}
