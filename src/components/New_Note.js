@@ -622,7 +622,7 @@ function OptionsChoice(props){
     let [new_note_stack,set_new_note_stack] = useContext(NewNoteStackContext);
     let [change_type, set_change_type] = useContext(ChangeTypeContext);
     let options_list = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-    let options_values = ['Add Contact','Add Link', 'Add Location', 'Add Event', 'Add Payment','Add Location', 'Add Checklist','Add Text','Add List'];
+    let options_values = ['Add Contact','Add Link', 'Add Image', 'Add Event', 'Add Payment','Add Location', 'Add Checklist','Add Text','Add List'];
     function getIndexOfMonth(month_string){
         switch(month_string){
             case 'Jan' : return 1;
