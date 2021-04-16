@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/TakeNotesApp/static/css/main.374b87a1.chunk.css",
-    "main.js": "/TakeNotesApp/static/js/main.de9b2928.chunk.js",
-    "main.js.map": "/TakeNotesApp/static/js/main.de9b2928.chunk.js.map",
+    "main.css": "/TakeNotesApp/static/css/main.8fd5274c.chunk.css",
+    "main.js": "/TakeNotesApp/static/js/main.b8a8fbfa.chunk.js",
+    "main.js.map": "/TakeNotesApp/static/js/main.b8a8fbfa.chunk.js.map",
     "runtime-main.js": "/TakeNotesApp/static/js/runtime-main.7254b0b6.js",
     "runtime-main.js.map": "/TakeNotesApp/static/js/runtime-main.7254b0b6.js.map",
-    "static/js/2.d8a81e45.chunk.js": "/TakeNotesApp/static/js/2.d8a81e45.chunk.js",
-    "static/js/2.d8a81e45.chunk.js.map": "/TakeNotesApp/static/js/2.d8a81e45.chunk.js.map",
+    "static/js/2.035c0e40.chunk.js": "/TakeNotesApp/static/js/2.035c0e40.chunk.js",
+    "static/js/2.035c0e40.chunk.js.map": "/TakeNotesApp/static/js/2.035c0e40.chunk.js.map",
     "index.html": "/TakeNotesApp/index.html",
-    "static/css/main.374b87a1.chunk.css.map": "/TakeNotesApp/static/css/main.374b87a1.chunk.css.map",
-    "static/js/2.d8a81e45.chunk.js.LICENSE.txt": "/TakeNotesApp/static/js/2.d8a81e45.chunk.js.LICENSE.txt",
+    "static/css/main.8fd5274c.chunk.css.map": "/TakeNotesApp/static/css/main.8fd5274c.chunk.css.map",
+    "static/js/2.035c0e40.chunk.js.LICENSE.txt": "/TakeNotesApp/static/js/2.035c0e40.chunk.js.LICENSE.txt",
     "static/media/App.css": "/TakeNotesApp/static/media/undo_btn.39c9d7f6.svg",
     "static/media/image_default.1b46f609.png": "/TakeNotesApp/static/media/image_default.1b46f609.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7254b0b6.js",
-    "static/js/2.d8a81e45.chunk.js",
-    "static/css/main.374b87a1.chunk.css",
-    "static/js/main.de9b2928.chunk.js"
+    "static/js/2.035c0e40.chunk.js",
+    "static/css/main.8fd5274c.chunk.css",
+    "static/js/main.b8a8fbfa.chunk.js"
   ]
 }
