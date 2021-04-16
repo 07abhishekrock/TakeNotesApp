@@ -81,7 +81,7 @@ function NoteLinkBlock(props){
                     <div key={index}>
                         <span></span>
                         <span>{element.data.title}</span>
-                        <span>{element.data.link_address.substr(0,40)}</span>
+                        <span>{element.data.link_address.length > 30 ? `${element.data.link_address.substr(0,30)}...` : element.data.link_address}</span>
                     </div>
                 );
             })}

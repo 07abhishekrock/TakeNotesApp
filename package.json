@@ -2,7 +2,7 @@
   "name": "take_notes",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://07abhishekrock.github.io/Take-Notes",
+  "homepage": "https://07abhishekrock.github.io/TakeNotesApp",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
