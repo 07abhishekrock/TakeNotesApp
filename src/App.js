@@ -1,6 +1,7 @@
 import React , {useState, useRef, useContext, useEffect} from 'react';
 import './App.css';
 import {New_Note} from './components/New_Note';
+import QuickPeek from './components/QuickPeek';
 import EditNote from './components/EditNote';
 import NotesBoard from './components/NotesBoard';
 import Header from './components/Header';
@@ -114,7 +115,13 @@ function App() {
       <AppWrapper>
         <Header/>
         <AlertWindow/>
-        <New_Note/>
+        <div className="first-view">
+            <QuickPeek/>
+            <div className="right">
+              <h1>Create A New Note <i></i></h1>
+              <New_Note/>
+            </div>
+        </div>
         <SearchBar/>
         <NotesBoard/>
         <EditNote/>

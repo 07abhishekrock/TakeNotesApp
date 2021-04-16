@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
+import {AlertContext} from './Contexts';
 
 function SearchBarCategory(props){
     let categories = ['Date Created', 'Only Images', 'Content Size'];
@@ -14,12 +15,13 @@ function SearchBarCategory(props){
 }
 
 function SearchBar(props){
+    let set_alert = useContext(AlertContext)[1];
     return(
         <div className="search-bar-wrapper">
             <h1>Your Past <i>Notes</i></h1>
             <div className="search-bar">
                 <input type="text" placeholder="Type in to Search ..."/>
-                <span></span>
+                <span onClick={()=>set_alert([1,'Not Implemented Yet'])}></span>
             </div>
             <SearchBarCategory/>
         </div>

@@ -1,8 +1,7 @@
 import React, {useState, useRef, useEffect, useContext} from 'react';
-import {UserContext, NoteDataContext, EditNoteDataContext, EditNoteContext } from './Contexts';
-import {convertNoteDatatoEditData, DeleteNoteWithId} from '../utilities/LocalStorage';
+import {UserContext, NoteDataContext, EditNoteDataContext, EditNoteContext, AlertContext } from './Contexts';
+import {convertNoteDatatoEditData, DeleteNoteWithId, EditNoteWithId, getNoteDataFromEditData} from '../utilities/LocalStorage';
 import MasonryObject from '../utilities/masonry';
-import { v4 } from 'uuid';
 
 //create sample note data to test out functionality
 
@@ -115,6 +114,8 @@ function NoteLocationBlock(props){
 }
 
 function NoteListBlock(props){
+    let [note_data, set_note_data] = useContext(NoteDataContext);
+    let user = useContext(UserContext)[0];
     if(!props.data_array.length){
         return null;
     }
@@ -125,8 +126,26 @@ function NoteListBlock(props){
             {props.data_array.map((element, index)=>{
                 return <ul key={index} is_checked={props.is_checked} >
                             <span>{element.data.title}</span>
-                    {element.data.list_items.map((element,index)=>{
-                        return (<li key={index} check={element.checked}>
+                    {element.data.list_items.map((element,c_index)=>{
+                        return (<li key={c_index} check={element.checked} onClick={()=>{
+                            if(props.is_checked === 0){
+                                return;
+                            }
+                            let list_block_id = props.data_array[index].id;
+                            let note_index = props.index;
+                            set_note_data(note_data.map((element, d_index)=>{
+                                if(d_index === note_index){
+                                     element.checklists.map((list_block)=>{
+                                        if(list_block.id === list_block_id){
+                                            list_block.data.list_items[c_index].checked = (Number(list_block.data.list_items[c_index].checked) + 1)%2;
+                                        }
+                                        return list_block;
+                                    })
+                                }
+                                    return element;
+                            }))
+                            EditNoteWithId(convertNoteDatatoEditData(note_data[props.index]), user.username);
+                        }}>
                                     <i></i><span>{element.item}</span>
                                </li>);
                     })}
@@ -184,6 +203,7 @@ function NoteEventBlock(props){
 function TitleBlock(props){
     let [note_data, set_note_data] = useContext(NoteDataContext);
     let user_data = useContext(UserContext)[0].username;
+    let set_alert = useContext(AlertContext)[1];
     let set_edit_note_data = useContext(EditNoteDataContext)[1];
     let set_edit_note_active = useContext(EditNoteContext)[1];
     return(
@@ -197,9 +217,10 @@ function TitleBlock(props){
                             return element.id !== note_data[props.index].id;
                         }));
                         DeleteNoteWithId(note_data[props.index].id, user_data);
+                        set_alert([3,'Note Deleted Succesfully']);
                     },400)
                 }}></span> {/*this is the delete button*/}
-                <span></span> {/*this is the share button*/}
+                <span onClick={()=>set_alert([3,'Coming Soon...'])}></span> {/*this is the share button*/}
                 <span onClick={()=>{
                     set_edit_note_data([...convertNoteDatatoEditData(note_data[props.index])]);
                     set_edit_note_active(1);
@@ -217,8 +238,8 @@ function NoteBlock(props){
             <NoteTextBlock data_array={props.texts}/>
             <NoteContactBlock data_array={props.contacts}/>
             <NoteTransactionBlock data_array={props.transactions}/>
-            <NoteListBlock data_array={props.checklists} is_checked={1}/>
-            <NoteListBlock data_array={props.lists} is_checked={0}/>
+            <NoteListBlock data_array={props.checklists} is_checked={1} id={props.id} index={props.index}/>
+            <NoteListBlock data_array={props.lists} is_checked={0} id={props.id} index={props.index}/>
             <NoteImageBlock data_array={props.images}/>
             <NoteLinkBlock data_array={props.links}/>
             <NoteEventBlock data_array={props.events}/>
@@ -240,7 +261,7 @@ function NoteCollection(props){
         parent_className:'note-collection',
         size:size_ref.current,
         count:note_data.length,
-        element_base_height:450,
+        element_base_height:500,
         element_base_span:440
     }));
     useEffect(()=>{
@@ -285,6 +306,7 @@ function NoteCollection(props){
             <div className="note-block-collapse-btn-wrapper" key={element.id}> {/*style={{transform:`translate(${(index % size_ref.current) * 420}px, ${Math.floor(index / size_ref.current) * 450}px)`}} */}
                 <NoteBlock
                 index={index}
+                id={element.id}
                 title={element.title || 'Note Title Here'}
                 date_created={element.date_created}
                 texts={element.texts || []}
@@ -300,7 +322,7 @@ function NoteCollection(props){
                 <span onClick={(e)=>{
                     e.target.parentNode.classList.toggle('expand');
                     masonry_object.current.SetLayout(index, e.target.parentNode.classList.contains('expand'));
-                }}>Expand</span>
+                }}>Toggle View</span>
         </div>
             )
         })

@@ -76,7 +76,7 @@ class MasonryObject{
         for(let j = this.main_array[i][0] - this.size;j >= 0;j-=this.size){
           if(isFoundInArray(j, first_indices_array)){
             let index = first_indices_array.indexOf(j);
-            height_stack_above = height_stack_above + elements_list[index].offsetHeight + 50;
+            height_stack_above = height_stack_above + elements_list[index].offsetHeight + 70;
           }
         }
         height_array.push(height_stack_above + elements_list[i].offsetHeight);
@@ -152,7 +152,7 @@ class MasonryObject{
         for(let j = this.main_array[i][0] - this.size;j >= 0;j-=this.size){
           if(isFoundInArray(j, first_indices_array)){
             let index = first_indices_array.indexOf(j);
-            height_stack_above = height_stack_above + elements_list[index].offsetHeight + 50;
+            height_stack_above = height_stack_above + elements_list[index].offsetHeight + 70;
           }
         }
         height_array.push(height_stack_above + elements_list[i].offsetHeight);

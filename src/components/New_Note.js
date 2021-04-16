@@ -602,12 +602,14 @@ function InputContainer(props){
 function ButtonAddNote(props){
     let [new_note_data , set_new_note_data] = useContext(NewNoteContext);
     let [note_data, set_note_data] = useContext(NoteDataContext);
+    let set_alert = useContext(AlertContext)[1];
     let user_data = useContext(UserContext)[0];
     return(
         <div onClick={()=>{
                 addNote(user_data, new_note_data);
                 set_note_data([ getNoteDataFromEditData(new_note_data),...note_data]);
                 set_new_note_data([{type:-1,noteId:v4(),date_created:(new Date()).toDateString().substr(4), title:''},{type:7,data:{},id:v4(), index:0}]);
+                set_alert([2,'Note Added Succesfully']);
         }}>
             <span></span>
             <span>Save Note</span>
@@ -620,7 +622,7 @@ function OptionsChoice(props){
     let [new_note_stack,set_new_note_stack] = useContext(NewNoteStackContext);
     let [change_type, set_change_type] = useContext(ChangeTypeContext);
     let options_list = [0, 1, 2, 3, 4, 5, 6, 7, 8]
-    let options_values = ['Add Contact','Add Link', 'Add Location', 'Add Text', 'Add Payment','Add Checklist', 'Add List','Add Image','Add Event'];
+    let options_values = ['Add Contact','Add Link', 'Add Location', 'Add Event', 'Add Payment','Add Location', 'Add Checklist','Add Text','Add List'];
     function getIndexOfMonth(month_string){
         switch(month_string){
             case 'Jan' : return 1;

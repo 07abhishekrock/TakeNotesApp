@@ -1,6 +1,6 @@
 import React, {useContext, useRef} from 'react';
 import {InputContainer , OptionsChoice, NewNoteContext, NewNoteStackContext} from './New_Note';
-import {UserContext, EditNoteContext, EditNoteDataContext, NoteDataContext} from './Contexts'
+import {UserContext, EditNoteContext, EditNoteDataContext, NoteDataContext, AlertContext} from './Contexts'
 import {EditNoteWithId, getNoteDataFromEditData} from '../utilities/LocalStorage';
 import {v4} from 'uuid';
 
@@ -30,6 +30,7 @@ function EditButton(props){
     let set_edit_note_active = useContext(EditNoteContext)[1];
     let set_new_note_stack = useContext(NewNoteStackContext)[1];
     let user_data = useContext(UserContext)[0];
+    let set_alert = useContext(AlertContext)[1];
     return(
         <div onClick={()=>{
             EditNoteWithId(new_note_data, user_data['username']);
@@ -42,6 +43,7 @@ function EditButton(props){
             set_edit_note_active(0);
             set_new_note_stack([]);
             set_edit_note_data([{type:-1,noteId:v4(),title:'',date_created:(new Date()).toDateString().substr(4)}]);
+            set_alert([2,'Note Edited Succesfully']);
         }}>
 
             <span></span>
