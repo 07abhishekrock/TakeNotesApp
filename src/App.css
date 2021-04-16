@@ -1501,6 +1501,7 @@ div.note-title::after{
 }
 div.note-title:not(:empty)::after{
   opacity:0;
+  content:none;
 }
 div.note-title:focus{
   outline:none;
