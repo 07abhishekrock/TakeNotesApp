@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/TakeNotesApp/static/css/main.374b87a1.chunk.css",
-    "main.js": "/TakeNotesApp/static/js/main.b0927fe0.chunk.js",
-    "main.js.map": "/TakeNotesApp/static/js/main.b0927fe0.chunk.js.map",
+    "main.js": "/TakeNotesApp/static/js/main.de9b2928.chunk.js",
+    "main.js.map": "/TakeNotesApp/static/js/main.de9b2928.chunk.js.map",
     "runtime-main.js": "/TakeNotesApp/static/js/runtime-main.7254b0b6.js",
     "runtime-main.js.map": "/TakeNotesApp/static/js/runtime-main.7254b0b6.js.map",
     "static/js/2.d8a81e45.chunk.js": "/TakeNotesApp/static/js/2.d8a81e45.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7254b0b6.js",
     "static/js/2.d8a81e45.chunk.js",
     "static/css/main.374b87a1.chunk.css",
-    "static/js/main.b0927fe0.chunk.js"
+    "static/js/main.de9b2928.chunk.js"
   ]
 }
