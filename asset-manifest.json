@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TakeNotesApp/static/css/main.7516bef5.chunk.css",
+    "main.css": "/TakeNotesApp/static/css/main.6aab0677.chunk.css",
     "main.js": "/TakeNotesApp/static/js/main.915c1165.chunk.js",
     "main.js.map": "/TakeNotesApp/static/js/main.915c1165.chunk.js.map",
     "runtime-main.js": "/TakeNotesApp/static/js/runtime-main.7254b0b6.js",
@@ -8,7 +8,7 @@
     "static/js/2.035c0e40.chunk.js": "/TakeNotesApp/static/js/2.035c0e40.chunk.js",
     "static/js/2.035c0e40.chunk.js.map": "/TakeNotesApp/static/js/2.035c0e40.chunk.js.map",
     "index.html": "/TakeNotesApp/index.html",
-    "static/css/main.7516bef5.chunk.css.map": "/TakeNotesApp/static/css/main.7516bef5.chunk.css.map",
+    "static/css/main.6aab0677.chunk.css.map": "/TakeNotesApp/static/css/main.6aab0677.chunk.css.map",
     "static/js/2.035c0e40.chunk.js.LICENSE.txt": "/TakeNotesApp/static/js/2.035c0e40.chunk.js.LICENSE.txt",
     "static/media/App.css": "/TakeNotesApp/static/media/undo_btn.39c9d7f6.svg",
     "static/media/image_default.1b46f609.png": "/TakeNotesApp/static/media/image_default.1b46f609.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.7254b0b6.js",
     "static/js/2.035c0e40.chunk.js",
-    "static/css/main.7516bef5.chunk.css",
+    "static/css/main.6aab0677.chunk.css",
     "static/js/main.915c1165.chunk.js"
   ]
 }
