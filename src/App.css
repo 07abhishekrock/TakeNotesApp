@@ -64,6 +64,7 @@ div.login-window>ul>li{
   border-radius:0.5em;
   margin-bottom:0.5em;
   padding:0.5em;
+  cursor:pointer;
 }
 @keyframes move-down{
   to{
@@ -123,6 +124,7 @@ div.login-window>button{
   border-radius:2em;
   display:flex;
   align-items:center;
+  cursor:pointer;
   margin:0 auto;
 }
 div.login-window>button:focus{
@@ -330,10 +332,14 @@ div.options>div{
   font-size:0.6em;
   text-align:center;
   box-sizing: border-box;
+  border-radius:0.5em;
+  cursor:pointer;
+}
+div.options>div:not(:last-child):hover{
+  background-color:#eee;
 }
 div.options>div:last-child{
   background-color:var(--primary-color);
-  border-radius:0.5em;
   color:white;
 }
 div.options>div>span:first-child{
@@ -1621,6 +1627,8 @@ div.first-view div.input-container>div.options>div{
   font-size:0.8em;
 }
 
+
+
 @media only screen and (max-width:1200px){
   div.first-view{
     grid-template-columns:100%;
@@ -1681,5 +1689,11 @@ div.first-view div.input-container>div.options>div{
     background-size:contain;
     background-position:center;
     margin-left:0.5em;
+  }
+}
+
+@media only screen and (max-width:700px){
+  div.first-view>div.right div.options>div{
+    font-size:0.65em;
   }
 }
